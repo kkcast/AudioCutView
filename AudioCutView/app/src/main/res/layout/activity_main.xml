@@ -3,6 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center"
+    android:background="#D3D3D3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -25,6 +27,7 @@
 
     <!--截取-->
     <LinearLayout
+        android:layout_marginTop="@dimen/my10dp"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="@dimen/my40dp">
@@ -32,8 +35,8 @@
         <TextView
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="@dimen/my15dp"
-            android:textColor="@android:color/white"
             android:text="截取"
+            android:textSize="@dimen/my14sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 

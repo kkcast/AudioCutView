@@ -77,22 +77,22 @@ public class AudioCutView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
 
-            int width = getWidth();
-            int height = getHeight();
-            float ctr = height / 2f;
-            for (int i = 0; i < width; i+=15) {
+        /**
+         * 绘制一条条线
+         */
+            float ctr = measuredHeight / 2f;
+            for (int i = 0; i < measuredWidth; i+=15) {
                 canvas.drawLine(i, ctr-smoothedGains[i]/2, i, ctr+smoothedGains[i]/2, wavePaint);
         }
 
 
-
+        /**
+         * 绘制阴影
+         */
         videoProgressWidth=measuredWidth*videoWidthRate;
         paint.setStrokeWidth(getHeight());
         paint.setAntiAlias(true);
         paint.setStyle(Paint.Style.STROKE);
-//        paint.setColor(Color.parseColor("#87654321"));
-
-//        canvas.drawLine(0,measuredHeight/2,measuredWidth,measuredHeight/2,paint);
 
         paint.setColor(Color.parseColor("#87654321"));
 
@@ -101,7 +101,10 @@ public class AudioCutView extends View {
 
     }
 
-
+    /**
+     * 设置视频占音频的比例
+     * @param videoWidthRate
+     */
     public void setVideoProgressWidth(float videoWidthRate){
         this.videoWidthRate=videoWidthRate;
     }
@@ -126,7 +129,9 @@ public class AudioCutView extends View {
     }
 
 
-
+    /**
+     * 生成一些随机数据
+     */
     public void computeSmoothedGains() {
 
         smoothedGains = new float[measuredWidth];
@@ -138,7 +143,6 @@ public class AudioCutView extends View {
             smoothedGains[i]=randNumber;
         }
 
-        postInvalidate();
     }
 
     public float dpToPx(float dp) {
