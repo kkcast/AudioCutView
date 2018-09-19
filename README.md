@@ -21,13 +21,13 @@ AudioCutView
 
 ```xml
   <com.kkcast.audiocutview.AudioCutView
-            android:id="@+id/audio_cut_view"
-            android:layout_marginLeft="@dimen/my20dp"
-            android:layout_marginRight="@dimen/my20dp"
-            android:layout_centerInParent="true"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            />
+      android:id="@+id/audio_cut_view"
+      android:layout_marginLeft="@dimen/my20dp"
+      android:layout_marginRight="@dimen/my20dp"
+      android:layout_centerInParent="true"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      />
 ```
 
 > Java代码
